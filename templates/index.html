@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+    <head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+      <title>{{title}}</title>
+    </head>
+    <body>
+		<form  method="post" novalidate >
+			<label>Topic :</label>
+			<input type = "text", name = "topic">
+			<input type= "submit">
+		</form>
+		<hr>
+        {% block content %}
+		{% endblock %}
+    </body>
+</html>
