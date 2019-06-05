@@ -1,5 +1,6 @@
 {% block content %}
     <h1>An unexpected error has occurred (Maybe this url isn't configured)</h1>
 	<h3>The error code is {{code}}</h3>
+	<p>Let's take you to our <a href="{{ url_for('index') }}">home page</a></p>
     <p>The administrator has been notified. Sorry for the inconvenience!</p>
 {% endblock %}
