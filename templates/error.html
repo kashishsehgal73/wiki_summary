@@ -1,6 +1,25 @@
-{% block content %}
-    <h1>An unexpected error has occurred (Maybe this url isn't configured)</h1>
+<html>
+<title>Wiki Summary Page</title>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet" />
+	<style type = 'text/css'>
+	.s010 {
+		min-height: 100vh;
+		justify-content: center;
+
+		align-items: center;
+		background: #d9eff5;
+		font-family: 'Lato', sans-serif;
+	}
+	</style>
+
+</head>
+<body>
+	<div class="s010">
+	<h1>An unexpected error has occurred (Maybe this url isn't configured)</h1>
 	<h3>The error code is {{code}}</h3>
 	<p>Let's take you to our <a href="{{ url_for('index') }}">home page</a></p>
-    <p>The administrator has been notified. Sorry for the inconvenience!</p>
-{% endblock %}
+	<p>The administrator has been notified. Sorry for the inconvenience!</p>
+</div>
+</body>
+</html>
