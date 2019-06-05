@@ -32,7 +32,15 @@ def login():
 		user, password = request.form.get("user"),request.form.get("pass")
 		print(user,password)
 		return "success"
+@app.errorhandler(404)
+def not_found_error(error):
+    return (render_template('404.html'), 404)
 
+#Error handler for 500
+@app.errorhandler(500)
+def internal_error(error):
+    db.session.rollback()
+    return (render_template('500.html'), 500)
 
 
 
