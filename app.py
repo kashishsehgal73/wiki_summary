@@ -17,7 +17,7 @@ def handle_query():
 		except wikipedia.exceptions.DisambiguationError as e:
 			summary = "<h2>There is an ambiguty!!</h2> <h3>Please enter from the following options:</h3> <br>" + "<br> ".join(e.options[:20])
 		except wikipedia.exceptions.PageError:
-			summary = "<h2>No Page found!!</h2> <br> <h3>Please try another query</h3> <br>"
+			summary = "<h3 style='color:red'>No Page found!! <br> Please try another query</h3> <br>"
 	else:
 		summary = "<h3 style='color:red'>Empty query!!!</h3>"
 	return render_template("summary.html",summary = summary)
